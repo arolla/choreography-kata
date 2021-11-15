@@ -16,12 +16,13 @@ Les étapes :
 1. Créer chaque service au plus simple (au plus naïf) et les faire s'appeler entre eux pour implémenter le workflow complet. Proposer un refactoring pour simplifier Booking.
 1. Extraire la partie orchestration hors du service Booking, dans un nouveau service. Reconnaitre le design pattern classique auquel il correspond.
 1. L'acheteur n'est pas informé s'il n'y a plus de place, il faut ajouter une notification (SMS ou email) dans ce cas. Ajouter le nouveau service Notification et faire en sorte q'il soit appelé quand nécessaire.
-1. Débrancher le service Notification, observer et commenter les changements nécessaires lors de l'ajout (ou la suppression) de nouveaux services. Proposer une approche alternative.
+1. Observer et commenter les changements nécessaires lors de l'ajout (ou la suppression) de nouveaux services. Proposer une approche alternative.
 
 **Approche alternative**
 
-1. Introduire votre propre EventBus sous forme d'un simple pattern Observer (exemple de code ci-après), refactorer le code pour que toute la coordination se passe au travers du bus, tout d'abord sans le service Notification.
-1. Ajouter le service Notification, puis observer et commenter les changements nécessaires lors de l'ajout (ou la suppression) de nouveaux services. Comparer les deux approches, observer comment la logique du workflow est fragmentée dans chaque service. En débrief, donner les avantages et inconvénients respectifs de chaque approche, et quelles contraintes sont nécessaires pour respecter le principe Open-Close.
+1. Introduire votre propre EventBus sous forme d'un simple pattern Observer (exemple de code ci-après), et transformer les services pour que toute la coordination se passe au travers du bus, sans le service Notification dans un premier temps.
+1. Ajouter le service Notification, puis observer et commenter les changements nécessaires lors de l'ajout (ou la suppression) de nouveaux services. 
+1. Comparer les deux approches, observer comment la logique du workflow est fragmentée dans chaque service. En débrief, donner les avantages et inconvénients respectifs de chaque approche, et quelles contraintes sont nécessaires pour respecter le principe Open-Close.
 
 
 ```java
@@ -56,7 +57,7 @@ public class MessageBus {
         this.subs.add(l);
     }
 
-    public void send(String msg) { 
+    public void send(Object msg) { 
         for (Listener l : subs) {
             l.onMessage(msg);
         }
