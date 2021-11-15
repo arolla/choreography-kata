@@ -32,22 +32,6 @@ public interface Listener {
 }
 
 /**
- * A basic event with a name and one single integer value
- */
-public class Event {
-  private final String name;
-  private final int value;
-
-  public Event(String name, int value) {
-    this.name = name;
-    this.value = value;
-  }
-
-  public String getName() {return name;}
-  public int getValue() {return value;}
-}
-
-/**
  * A simple in-memory, observer-pattern-based single-threaded message bus for designing architecture and testing using unit tests before switching to using actual middleware
  */
 public class MessageBus {
@@ -62,6 +46,26 @@ public class MessageBus {
             l.onMessage(msg);
         }
     }
+}
+```
+
+Si vous le souhaitez, vous pouvez aussi n'envoyer que des messages de type événements métier :
+
+```java
+/**
+ * A basic event with a name and one single integer value
+ */
+public class Event {
+  private final String name;
+  private final int value;
+
+  public Event(String name, int value) {
+    this.name = name;
+    this.value = value;
+  }
+
+  public String getName() {return name;}
+  public int getValue() {return value;}
 }
 ```
 
