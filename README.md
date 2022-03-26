@@ -18,7 +18,7 @@ Let's consider a system to sell theater tickets online. It's made of:
 **Traditional Approach**
 
 1. Create each service naively, each as just one class. Have them call each other until the whole process works. Then propose a way to refactor so that the Booking service doesn't do too much.
-1 Extract the orchestration part out of the Booking service, into a new service. Try to recogize the standard corresponding design pattern.
+1. Extract the orchestration part out of the Booking service, into a new service. Try to recogize the standard corresponding design pattern.
 1. Right now the buyer is not informed when there's no seat left, you need to add a notification service (text or email) for this cas. Add the new service and integrate it so that it gets notified when needed.
 1. Observe and comment the necessary changes when adding or suppressing new services. Propose an alternative approach.
 
