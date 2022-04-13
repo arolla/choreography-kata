@@ -24,7 +24,7 @@ Let's consider a system to sell theater tickets online. It's made of:
 
 **Alternative Approach**
 
-1. Introduce your own EventBus as a simple alternative pattern (code sample below in Java), then transform the services so that all the coordination is done through the bus, without the Notification service to start with.
+1. Introduce your own EventBus as a simple alternative pattern (code sample below in Java) (BONUS: You may as well introduce the bus by progressively refactor your orchestrator). Then transform the services so that all the coordination is done through the bus, without the Notification service to start with.
 1. Now add the Notification service, then observe and comment the necessary changes when adding or suppressing new services. 
 1. Compare both approaches, observe how the workflow logic is now fragmented into each service. Debrief: compare respective advantages and drawbacks of each apprach, and which constraints are necessary to follow the Open-Close principle.
 
