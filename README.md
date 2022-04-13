@@ -22,7 +22,7 @@ Let's consider a system to sell theater tickets online. It's made of:
 1. Right now the buyer is not informed when there's no seat left, you need to add a notification service (text or email) for this cas. Add the new service and integrate it so that it gets notified when needed.
 1. Observe and comment the necessary changes when adding or suppressing new services. Propose an alternative approach.
 
-**Alternative Approach *
+**Alternative Approach**
 
 1. Introduce your own EventBus as a simple alternative pattern (code sample below in Java), then transform the services so that all the coordination is done through the bus, without the Notification service to start with.
 1. Now add the Notification service, then observe and comment the necessary changes when adding or suppressing new services. 
