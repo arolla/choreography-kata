@@ -82,9 +82,10 @@ This kata covers the following aspects: **Event-Driven Architecture**, **Choreog
 ## Enoncé du problème (Francais)
 
 
-Considérons un système de distributions de billets de spectacles en ligne. Le processus de vente consiste typiquement à Réserver (Booking), puis à réduire l'inventaire en correspondance s'il reste suffisamment de place (Inventory), puis à envoyer les billets (Ticketing), chacune de ces étapes étant un service distinct.
-
-*Pour rester simple, chaque service ne fera rien d'autre que prétendre avoir terminé son travail et assurer la coordination d'ensemble.*
+Considérons un système de distributions de billets de spectacles en ligne. Le processus de vente consiste typiquement à Réserver (Booking), puis à réduire l'inventaire en correspondance s'il reste suffisamment de place (Inventory), puis à envoyer les billets (Ticketing), chacune de ces étapes étant un service distinct :
+- un service Booking avec une fonction book(int numberOfSeats) qui imprime "booking requested" dans la sortie standard quand l'action est considérée comme faite.
+- un service Inventory avec une fonction decrementCapacity(int numberOfSeats) qui vérifie qu'il y a assez de places, et dans ce cas décrémente le compteur interne de places disponibles et affiche le nombre de places restantes.
+- un service Ticketing avec une fonction printTicket(int numberOfSeats) qui affiche "ticket printed" quand l'action est considérée comme faite.
 
 ## Les étapes :
 
