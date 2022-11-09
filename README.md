@@ -74,7 +74,7 @@ public class Event {
 ```
 
 
-This kata covers the following aspects: **Event-Driven Architecture**, **Choreography over Orchestration** and **Smart Endpoints, Dump Pipes**, which together form the microservices architectural style.
+This kata covers the following aspects: **Event-Driven Architecture**, **Choreography over Orchestration** and **Smart Endpoints, Dumb Pipes**, which together form the microservices architectural style.
 
 
 
@@ -104,4 +104,4 @@ Considérons un système de distributions de billets de spectacles en ligne. Le 
 
 Si vous le souhaitez, vous pouvez aussi n'envoyer que des messages de type événements métier.
 
-Ce kata couvre les aspects **Event-Driven Architecture**, **Choreography over Orchestration** et **Smart Endpoints, Dump Pipes**, qui ensemble font le style d'architecture microservices.
+Ce kata couvre les aspects **Event-Driven Architecture**, **Choreography over Orchestration** et **Smart Endpoints, Dumb Pipes**, qui ensemble font le style d'architecture microservices.
