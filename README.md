@@ -4,6 +4,7 @@ A kata to learn and practice Choreography as opposed to Orchestration, as in a m
 
 Below the english and french versions.
 
+![The inital set of 3 services as described below](Step1_Services.png)
 
 # Problem Statement (english)
 
