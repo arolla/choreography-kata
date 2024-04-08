@@ -46,7 +46,7 @@ public class MessageBus {
         this.subs.add(l);
     }
 
-    public void send(Object msg) { 
+    public void publish(Object msg) { 
         for (Listener l : subs) {
             l.onMessage(msg);
         }
