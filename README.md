@@ -10,9 +10,9 @@ Below the english and french versions.
 
 Let's consider a system to sell theater tickets online. It's made of:
 
-- a Booking service with a book(int numberOfSeats) function (that prints "booking requested" in the standard out while pretending it's done its work)
-- an Inventory service with a decrementCapacity(int numberOfSeats) function (that checks if there's enough capacity left, then decrements the internal capacity counter then prints the remaining capacity in the standard out)
-- a Ticketing service with a printTicket(int numberOfSeats) function (that prints "ticket printed" in the standard out while pretending it's done its work)
+- a Booking service with a `requestBooking(int numberOfSeats)` function (that prints "booking requested" in the standard out while pretending it's done its work)
+- an Inventory service with a `reserveInventory(int numberOfSeats)` function (that checks if there's enough capacity left, then decrements the internal capacity counter then prints the remaining capacity in the standard out)
+- a Ticketing service with a `printTicket(int numberOfSeats)` function (that prints "ticket printed" in the standard out while pretending it's done its work)
 
 ## Steps
 
@@ -84,9 +84,9 @@ This kata covers the following aspects: **Event-Driven Architecture**, **Choreog
 
 
 Considérons un système de distributions de billets de spectacles en ligne. Le processus de vente consiste typiquement à Réserver (Booking), puis à réduire l'inventaire en correspondance s'il reste suffisamment de place (Inventory), puis à envoyer les billets (Ticketing), chacune de ces étapes étant un service distinct :
-- un service Booking avec une fonction book(int numberOfSeats) qui imprime "booking requested" dans la sortie standard quand l'action est considérée comme faite.
-- un service Inventory avec une fonction decrementCapacity(int numberOfSeats) qui vérifie qu'il y a assez de places, et dans ce cas décrémente le compteur interne de places disponibles et affiche le nombre de places restantes.
-- un service Ticketing avec une fonction printTicket(int numberOfSeats) qui affiche "ticket printed" quand l'action est considérée comme faite.
+- un service Booking avec une fonction `requestBooking(int numberOfSeats)` qui imprime "booking requested" dans la sortie standard quand l'action est considérée comme faite.
+- un service Inventory avec une fonction `reserveInventory(int numberOfSeats)` qui vérifie qu'il y a assez de places, et dans ce cas décrémente le compteur interne de places disponibles et affiche le nombre de places restantes.
+- un service Ticketing avec une fonction `printTicket(int numberOfSeats)` qui affiche "ticket printed" quand l'action est considérée comme faite.
 
 ## Les étapes :
 
