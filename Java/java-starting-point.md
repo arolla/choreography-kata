@@ -3,7 +3,7 @@ BookingService,  InventoryService & TicketingService classes
 ```
 public record BookingService() {
 
-    public void book(int numberOfSeats) {
+    public void requestBooking(int numberOfSeats) {
         // validate booking etc.
         System.out.println("BookingRequested");
     }
