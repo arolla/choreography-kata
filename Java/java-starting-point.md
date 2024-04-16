@@ -1,7 +1,7 @@
 
 BookingService,  InventoryService & TicketingService classes
 ```
-public record BookingService(Orchestration orchestration) {
+public record BookingService() {
 
     public void book(int numberOfSeats) {
         // validate booking etc.
