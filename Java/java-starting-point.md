@@ -6,7 +6,6 @@ public record BookingService(Orchestration orchestration) {
     public void book(int numberOfSeats) {
         // validate booking etc.
         System.out.println("BookingRequested");
-        orchestration.launch(numberOfSeats);
     }
 }
 
